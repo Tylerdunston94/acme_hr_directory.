@@ -6,7 +6,7 @@ const seedDatabase = async () => {
     const hr = await Department.create({ name: 'Human Resources' });
     const it = await Department.create({ name: 'IT' });
 
-    await Employee.bulkCreate([
+    await Employee.bulkCreate([  // allows you to create multiple instances of the Employee model
         { name: 'Alice', department_id: hr.id },
         { name: 'Bob', department_id: it.id },
         { name: 'Charlie', department_id: hr.id }
